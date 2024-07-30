@@ -36,7 +36,7 @@ class SipBuildTool(object):
 class Pkg(ConanFile):
     name = "sipbuildtool"
     version = "0.2.2"
-    default_user = "ultimaker"
+    default_user = "lulzbot"
     default_channel = "stable"
     exports_sources = "SIPMacros.cmake"
 

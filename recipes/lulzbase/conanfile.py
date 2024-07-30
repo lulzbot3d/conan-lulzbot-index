@@ -2,16 +2,16 @@ from conan import ConanFile
 from conan.tools.scm import Version
 
 
-class UMBaseConanfile(object):
+class LulzBaseConanfile(object):
     """
-    Ultimaker base conanfile, for reusing Python code in our repositories
+    LulzBot's base conanfile, for reusing Python code in our repositories
     https://docs.conan.io/en/latest/extending/python_requires.html
     """
 
-    def _umdefault_version(self):
+    def _lulzdefault_version(self):
         return list(self.conan_data)[0]
 
-    def _um_data(self) -> dict:
+    def _lulz_data(self) -> dict:
         """
         Extract the version specific data out of a conandata.yml
         """
@@ -24,7 +24,7 @@ class UMBaseConanfile(object):
         return self.conan_data[available_versions]
 
 class Pkg(ConanFile):
-    name = "umbase"
+    name = "lulzbase"
     version = "0.1.7"
-    default_user = "ultimaker"
+    default_user = "lulzbot"
     default_channel = "stable"

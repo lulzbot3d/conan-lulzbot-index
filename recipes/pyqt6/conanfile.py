@@ -22,7 +22,7 @@ class PyQt6Conan(ConanFile):
     settings = "os", "compiler", "build_type", "arch"
     build_policy = "missing"
 
-    python_requires = "pyprojecttoolchain/[>=0.1.6]@ultimaker/stable", "sipbuildtool/[>=0.2.2]@ultimaker/stable"
+    python_requires = "pyprojecttoolchain/[>=0.1.6]@lulzbot/stable", "sipbuildtool/[>=0.2.2]@lulzbot/stable"
 
     options = {
         "shared": [True, False],
@@ -43,7 +43,7 @@ class PyQt6Conan(ConanFile):
 
     def requirements(self):
         self.requires("cpython/3.10.4")
-        self.requires(f"qt/{self.version}@ultimaker/testing")
+        self.requires(f"qt/{self.version}@lulzbot/testing")
 
         # Overriding version conflicts of dependencies for cpython and qt
         self.requires("zlib/1.2.12")

@@ -282,5 +282,5 @@ class PyProjectToolchain(AutotoolsToolchain):
 class PyProjectToolchainPkg(ConanFile):
     name = "pyprojecttoolchain"
     version = "0.1.6"
-    default_user = "ultimaker"
+    default_user = "lulzbot"
     default_channel = "stable"
